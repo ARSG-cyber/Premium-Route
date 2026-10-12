@@ -22,9 +22,9 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#080a0f] text-[#f0f3f8] flex flex-col selection:bg-[#00f0b5] selection:text-black">
+    <div className="min-h-screen bg-[#f8fafc] text-[#0f172a] flex flex-col selection:bg-[#00d49f] selection:text-black">
       
-      {/* Navigation */}
+      {/* Clean Frosted Navigation */}
       <Navbar onOpenDemo={handleOpenDemo} />
 
       {/* Main Experience Flow */}
@@ -38,7 +38,7 @@ export const App: React.FC = () => {
         {/* 3 Editorial Product Storytelling Moments */}
         <ProductStory />
 
-        {/* Signature Interactive Package Journey Experience */}
+        {/* Signature Interactive Package Journey & Visual Map Experience (NO Terminal) */}
         <DeliveryJourney />
 
         {/* Bold Editorial Manifesto Section */}

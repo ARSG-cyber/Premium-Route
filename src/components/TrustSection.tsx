@@ -34,42 +34,38 @@ export const TrustSection: React.FC = () => {
   ];
 
   return (
-    <section id="proof" className="relative py-20 md:py-28 bg-[#090b10] border-b border-white/8 overflow-hidden">
+    <section id="proof" className="relative py-20 md:py-28 bg-[#f8fafc] border-b border-slate-200 overflow-hidden">
       
-      {/* Background radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] bg-[#00f0b5]/5 blur-[120px] pointer-events-none rounded-full" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-[#00f0b5] mb-3">
-            <Sparkles className="w-3 h-3 text-[#00f0b5]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/5 border border-slate-200 text-xs font-mono text-emerald-700 mb-3 font-semibold">
+            <Sparkles className="w-3 h-3 text-emerald-600" />
             <span>ESTABLISHED TRUST</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white font-display mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900 font-display mb-4">
             Built for brands that refuse to stand still.
           </h2>
-          <p className="text-sm sm:text-base text-white/60">
+          <p className="text-sm sm:text-base text-slate-600">
             Leading consumer innovators, luxury fashion houses, and high-growth DTC brands trust Route to protect every shipment and elevate their customer relationships.
           </p>
         </div>
 
         {/* Elegant Marquee Brand Logo Ribbon */}
-        <div className="relative py-8 my-6 border-y border-white/10 overflow-hidden">
+        <div className="relative py-7 my-6 border-y border-slate-200 bg-white/60 overflow-hidden">
           {/* Gradient fade masks on left and right */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-[#090b10] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-[#090b10] to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-r from-[#f8fafc] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-gradient-to-l from-[#f8fafc] to-transparent z-10 pointer-events-none" />
 
           {/* Marquee Track */}
           <div className="flex animate-marquee gap-14 sm:gap-20 items-center">
-            {/* Duplicated for seamless loop */}
             {[...brands, ...brands].map((brand, i) => (
               <div 
                 key={`${brand.name}-${i}`} 
-                className="flex items-center shrink-0 opacity-55 hover:opacity-100 transition-opacity duration-300 cursor-default"
+                className="flex items-center shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300 cursor-default"
               >
-                <span className={`text-white uppercase ${brand.font}`}>
+                <span className={`text-slate-800 uppercase ${brand.font}`}>
                   {brand.name}
                 </span>
               </div>
@@ -77,22 +73,22 @@ export const TrustSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Qualitative Trust Pillars (No fabricated numerical metrics, authentic qualitative value) */}
+        {/* Qualitative Trust Pillars */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
           {pillars.map((pillar) => {
             const Icon = pillar.icon;
             return (
               <div
                 key={pillar.title}
-                className="p-6 sm:p-7 rounded-3xl bg-[#0f131c]/60 border border-white/10 hover:border-[#00f0b5]/30 hover:bg-[#0f131c]/90 transition-all duration-300 group shadow-lg"
+                className="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200/90 hover:border-emerald-300 hover:shadow-lg transition-all duration-300 group shadow-sm"
               >
-                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 group-hover:border-[#00f0b5]/40 group-hover:bg-[#00f0b5]/10 flex items-center justify-center mb-5 transition-colors">
-                  <Icon className="w-6 h-6 text-white/80 group-hover:text-[#00f0b5] transition-colors" />
+                <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-200 group-hover:border-emerald-300 group-hover:bg-emerald-50 flex items-center justify-center mb-5 transition-colors">
+                  <Icon className="w-6 h-6 text-slate-700 group-hover:text-emerald-600 transition-colors" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2 font-display">
+                <h3 className="text-lg font-bold text-slate-900 mb-2 font-display">
                   {pillar.title}
                 </h3>
-                <p className="text-sm text-white/60 leading-relaxed">
+                <p className="text-sm text-slate-600 leading-relaxed">
                   {pillar.description}
                 </p>
               </div>
