@@ -3,21 +3,19 @@ import {
   Play, 
   Pause, 
   RotateCcw, 
-  Package, 
   Truck, 
-  Home, 
   CheckCircle2, 
   MapPin, 
   Camera, 
   Leaf, 
-  Navigation,
-  Clock,
-  ShieldCheck,
-  Check,
-  Sparkles,
-  Smartphone
+  Navigation, 
+  Clock, 
+  ShieldCheck, 
+  Sparkles, 
+  Smartphone 
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
+
 
 interface JourneyStage {
   id: number;
